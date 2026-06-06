@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#ffffff">
+    <title>Login — Pick Next</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-row">
+        <a class="brand" href="index.html">
+          <span class="brand-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="geminiGradLogin" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#d4af37"/>
+                  <stop offset="100%" stop-color="#8d7558"/>
+                </linearGradient>
+              </defs>
+              <circle cx="32" cy="32" r="28" fill="url(#geminiGradLogin)" opacity="0.92"/>
+              <path d="M20 28c0-5.5 4.5-10 10-10s10 4.5 10 10c0 4-2.5 7.5-6 9V40a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-2.9c-3.5-1.5-6-5-6-8.1z" fill="#fff"/>
+              <path d="M32 18a8 8 0 0 1 8 8c0 4.4-3.6 8-8 8s-8-3.6-8-8a8 8 0 0 1 8-8z" fill="#fff" opacity="0.9"/>
+            </svg>
+          </span>
+          <span>Pick Next</span>
+        </a>
+        <nav class="nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="products.html" class="nav-link">Products</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero" style="padding:3rem 0 4rem; background:none;">
+        <div class="auth-card">
+          <h1>Static Site Only</h1>
+          <p class="muted">Backend authentication has been removed. Browse our products or contact us directly.</p>
+          <p><a class="btn-primary" href="products.html">View Products</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Pick Next — All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

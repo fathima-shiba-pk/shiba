@@ -1,0 +1,181 @@
+:root{
+  --bg:#fafafa;
+  --text:#222;
+  --silver:#c0c0c0;
+  --gold:#d4af37;
+  --accent:#111;
+  --max-width:1100px;
+}
+/* Typography and branding */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap');
+
+html{scroll-behavior:smooth}
+*{scroll-margin-top:80px}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
+
+/* Premium heading font */
+h1,h2,h3{font-family:'Playfair Display', Georgia, serif;color:var(--accent);letter-spacing:0.2px}
+
+/* Light performance-focused defaults */
+img{max-width:100%;display:block}
+a{transition:all .18s ease}
+
+.site-header{position:sticky;top:0;background:rgba(255,255,255,0.85);backdrop-filter:blur(4px);box-shadow:0 1px 0 rgba(0,0,0,0.04);z-index:50}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.6;color:var(--text);background:var(--bg);margin:0;-webkit-font-smoothing:antialiased}
+.container{max-width:var(--max-width);margin:0 auto;padding:2rem}
+.nav-row{display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700;color:var(--accent);text-decoration:none;font-size:1.25rem;display:flex;align-items:center;gap:.75rem}
+.brand-icon{display:inline-flex;align-items:center;gap:.5rem}
+.brand-icon svg{width:1.5rem;height:1.5rem;display:block}
+.site-header{border-bottom:1px solid rgba(0,0,0,0.06);background:#fff}
+.nav{display:flex;gap:1rem;align-items:center}
+ .nav-link{color:var(--accent);text-decoration:none;padding:.5rem}
+ .cart-link{position:relative;font-weight:700}
+ .cart-link #cartCount{background:var(--gold);color:#111;border-radius:999px;padding:.1rem .5rem;font-size:.85rem;margin-left:.35rem}
+ .nav-actions{display:flex;gap:.75rem;align-items:center}
+ .nav-actions .nav-link{background:rgba(212,175,55,0.08);border-radius:999px;padding:.5rem .85rem}
+.nav-toggle{display:none;background:none;border:0;font-size:1.5rem}
+
+.hero{padding:4rem 0;background:linear-gradient(180deg,rgba(212,175,55,0.04),transparent)}
+.hero-inner{display:flex;gap:2.5rem;align-items:center}
+.hero-text{flex:1}
+.hero-text h1{font-size:2.4rem;margin:.25rem 0}
+.lead{color:rgba(0,0,0,0.6);font-size:1.05rem}
+.hero-image img{width:100%;max-width:520px;border-radius:14px;box-shadow:0 18px 50px rgba(16,18,20,0.08);transform-origin:center}
+
+/* subtle hero animation */
+.hero-image img{transition:transform .6s cubic-bezier(.2,.9,.2,1),filter .4s}
+.hero-image img:hover{transform:scale(1.02) translateY(-4px);filter:contrast(1.02)}
+
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:1.25rem}
+.card{background:#fff;padding:1rem;border-radius:10px;text-align:center;box-shadow:0 8px 28px rgba(16,18,20,0.04)}
+.card img{width:100%;height:auto;border-radius:8px}
+.cuff-gallery{display:flex;gap:.5rem;overflow-x:auto;padding-bottom:.5rem;margin-bottom:.8rem}
+.cuff-gallery img{flex:0 0 120px;width:120px;height:120px;object-fit:cover;border-radius:10px}
+.product-points{list-style:disc;margin:1rem 0 .85rem;padding-left:1.25rem;text-align:left;color:rgba(0,0,0,0.65)}
+.product-points li{margin:.35rem 0;font-size:.95rem}
+.add-cart{display:inline-flex;min-width:140px;padding:.55rem 1rem;font-size:.9rem;border-radius:6px;margin-top:.5rem}
+.price{color:var(--gold);font-weight:700;margin-top:.5rem}
+.price-old{color:#888;font-size:.9rem;margin-right:.5rem;text-decoration:line-through;display:inline-block}
+
+/* Product gallery */
+.category-tabs{display:flex;gap:.6rem;margin-bottom:1rem;flex-wrap:wrap}
+.tab{padding:.5rem 1rem;border-radius:999px;background:transparent;border:1px solid rgba(0,0,0,0.06);cursor:pointer;color:var(--accent)}
+.tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+.product-card{background:linear-gradient(180deg,#fff,#fbfbfb);border-radius:14px;overflow:hidden;position:relative;box-shadow:0 20px 40px rgba(16,18,20,0.06);transition:transform .32s cubic-bezier(.2,.9,.2,1),box-shadow .32s}
+.product-card:focus-within,.product-card:hover{transform:translateY(-10px);box-shadow:0 30px 80px rgba(16,18,20,0.12)}
+.product-media{width:100%;height:340px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(0,0,0,0.02),transparent)}
+.product-media img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.9,.2,1)}
+.product-media img:hover{transform:scale(1.06)}
+.product-body{padding:1.2rem}
+.product-title{font-weight:700;margin:0 0 .25rem;font-size:1.05rem}
+.product-meta{display:flex;justify-content:space-between;align-items:center}
+.inquire-btn{background:#25D366;color:white;padding:.6rem .8rem;border-radius:10px;text-decoration:none;font-weight:700;border:0;display:inline-flex;align-items:center;gap:.5rem}
+.inquire-btn svg{width:18px;height:18px}
+
+/* Modal: product detail */
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.5);z-index:1200;padding:1.25rem}
+.modal-inner{background:#fff;border-radius:12px;max-width:960px;width:100%;display:flex;gap:1rem;overflow:hidden}
+.modal-close{position:absolute;right:1.25rem;top:1.25rem;background:transparent;border:0;font-size:2rem;line-height:1;color:#222;cursor:pointer}
+.modal-media{flex:1;min-width:320px;height:420px;background:#f7f7f7;display:flex;align-items:center;justify-content:center}
+.modal-media img{max-width:100%;max-height:100%;object-fit:contain}
+.modal-body{flex:1;padding:1.25rem;display:flex;flex-direction:column;justify-content:flex-start}
+.modal-body h2{margin:0 0 .5rem}
+.modal-body .price{font-size:1.25rem}
+
+
+@media (max-width:900px){
+  .product-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:600px){
+  .product-grid{grid-template-columns:1fr}
+  .product-media{height:240px}
+}
+
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+
+.insta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem}
+.insta-grid img{width:100%;height:100%;object-fit:cover;border-radius:6px}
+
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:1.5rem}
+form label{display:block;margin-bottom:.75rem}
+input,textarea{width:100%;padding:.6rem;border:1px solid #e6e6e6;border-radius:6px}
+
+.btn-primary{background:var(--gold);color:#111;padding:.6rem 1rem;border-radius:6px;text-decoration:none;font-weight:600;border:none;cursor:pointer}
+.btn-ghost{border:1px solid #ddd;padding:.45rem .8rem;border-radius:6px;text-decoration:none;color:var(--accent);background:#fff;cursor:pointer}
+.center{text-align:center}
+ .auth-card{background:#fff;padding:2rem;border-radius:18px;box-shadow:0 18px 40px rgba(16,18,20,0.08);max-width:520px;margin:0 auto}
+ .auth-card h1{font-size:2rem;margin-bottom:1rem}
+ .auth-field{display:grid;gap:.5rem;margin-bottom:1rem}
+ .auth-field label{font-weight:600;color:rgba(0,0,0,0.78)}
+ .auth-field input{width:100%;padding:.9rem 1rem;border:1px solid #e4e4e4;border-radius:10px;background:#fbfbfb}
+ .auth-error{color:#b00020;font-size:.95rem;margin-bottom:1rem}
+.footer-nav a{margin-left:1rem;color:rgba(0,0,0,0.6);text-decoration:none}
+
+@media (max-width:900px){
+  .product-grid{grid-template-columns:repeat(2,1fr)}
+  .trust-grid{grid-template-columns:1fr}
+  .insta-grid{grid-template-columns:repeat(3,1fr)}
+  .hero-inner{flex-direction:column-reverse;text-align:center}
+  .hero-image img{max-width:320px}
+  .contact-grid{grid-template-columns:1fr}
+}
+
+@media (max-width:600px){
+  .nav{display:none}
+  .nav-toggle{display:block}
+  .product-grid{grid-template-columns:1fr}
+  .insta-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+/* Social & WhatsApp */
+.social-icons{display:flex;gap:.75rem;align-items:center}
+.social-icons a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:8px;background:transparent;border:1px solid rgba(0,0,0,0.06);text-decoration:none}
+.social-icons svg{width:20px;height:20px;display:block}
+
+.whatsapp-float{position:fixed;right:20px;bottom:20px;background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(37,211,102,0.2);z-index:9999;text-decoration:none}
+.whatsapp-float svg{width:26px;height:26px;fill:#fff}
+
+/* Cart drawer styles */
+.cart-drawer{position:fixed;top:0;right:0;height:100%;width:360px;background:#fff;box-shadow:-20px 0 60px rgba(16,18,20,0.12);z-index:1400;transform:translateX(110%);transition:transform .32s ease;display:flex;flex-direction:column}
+.cart-drawer.open{transform:translateX(0)}
+.cart-drawer .cart-close{position:absolute;left:10px;top:10px;border:0;background:transparent;font-size:2rem;cursor:pointer}
+.cart-inner{padding:3.5rem 1.25rem 1.25rem;overflow:auto;flex:1}
+.cart-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.8rem}
+.cart-item{display:flex;gap:.75rem;align-items:center;border-radius:8px;padding:.5rem;background:#fafafa}
+.cart-item img{width:64px;height:64px;object-fit:cover;border-radius:6px}
+.cart-item .meta{flex:1}
+.cart-item .meta h4{margin:0;font-size:0.95rem}
+.cart-item .meta .price{font-weight:700;color:var(--gold)}
+.cart-item .remove{background:transparent;border:0;color:#b00020;cursor:pointer;font-weight:700}
+.cart-summary{margin-top:1rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.cart-actions{display:flex;gap:.5rem}
+
+@media (max-width:700px){
+  .cart-drawer{width:100%}
+}
+
+.insta-handle{font-weight:600;margin-left:.5rem;color:var(--accent);text-decoration:none}
+
+/* Image gallery for Minimal Necklace */
+#necklaceGallery{position:relative}
+.gallery-main{position:relative;height:340px;overflow:hidden;border-radius:10px}
+#mainImage{width:100%;height:100%;object-fit:cover;transition:opacity .3s ease}
+.gallery-controls{position:absolute;top:50%;left:0;right:0;transform:translateY(-50%);display:flex;justify-content:space-between;padding:0 1rem;z-index:10}
+.gallery-prev,.gallery-next{background:rgba(0,0,0,0.4);border:none;color:white;width:44px;height:44px;border-radius:50%;cursor:pointer;font-size:1.5rem;transition:background .3s;display:flex;align-items:center;justify-content:center}
+.gallery-prev:hover,.gallery-next:hover{background:rgba(0,0,0,0.7)}
+.gallery-thumbnails{display:flex;gap:.6rem;margin-top:1rem;overflow-x:auto;padding-bottom:.5rem}
+.thumb{width:60px;height:60px;object-fit:cover;border-radius:6px;cursor:pointer;border:2px solid transparent;transition:border .3s;flex-shrink:0}
+.thumb:hover{border-color:var(--gold)}
+.thumb.active{border-color:var(--gold);box-shadow:0 0 0 2px rgba(212,175,55,0.2)}
+
+
+@media (max-width:900px){
+  .necklaces-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:600px){
+  .necklaces-grid{grid-template-columns:1fr}
+  .necklace-card img{height:240px}
+}
